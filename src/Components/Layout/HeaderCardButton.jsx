@@ -1,13 +1,18 @@
-import CartIcon from "../Cart/CartIcon"
+import { Fragment } from "react";
+import CartIcon from "../Cart/CartIcon";
 
-const HeaderCardButton = () => {
-    return (
-        <button>
-            <span><CartIcon/></span>
-            <span>Your Cart</span>
-            <span>3</span>
-            </button>
-    )
-}
-export default HeaderCardButton
-// three span for icon , text, batch
+const HeaderCardButton = (props) => {
+  return (
+    <Fragment>
+      <button onClick={props.onClick}>
+        <span>
+          <CartIcon />
+        </span>
+        <span>Your Cart</span>
+        <span>3</span> {/* Example for badge */}
+      </button>
+    </Fragment>
+  );
+};
+
+export default HeaderCardButton;
